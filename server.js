@@ -11,7 +11,7 @@ if(process.env.PORT){
 
 app.use(express.urlencoded({extended: true}));
 app.use(methodOverride('_method'));
-app.use('/records', recordsController);
+app.use(recordsController);
 
 
 

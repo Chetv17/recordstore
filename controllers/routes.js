@@ -7,7 +7,7 @@ const Record = require('../models/schema.js');
 
 
 router.get('/', (req, res)=>{
-  Record.find({}, (error, allRecords) => {
+  Record.find({}, (err, allRecords) => {
     res.render(
       'index.ejs',
       {
