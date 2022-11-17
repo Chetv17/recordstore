@@ -6,14 +6,14 @@ const Record = require('../models/schema.js');
 
 
 
-router.get('/', (req, res)=>{
-  Record.find({}, (err, allRecords) => {
-    res.render(
-      'index.ejs',
-      {
-        records: allRecords
-      })
-    })
+router.get('/', (req, res) => {
+  // Record.find({}, (err, allRecords) => {
+    res.send('hi')
+    //   'index.ejs',
+    //   {
+    //     records: allRecords
+    //   })
+    // })
   });
 
 
