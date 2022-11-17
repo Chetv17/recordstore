@@ -8,8 +8,8 @@ const Record = require('../models/schema.js');
 
 router.get('/', (req, res) => {
   // Record.find({}, (err, allRecords) => {
-    res.send('hi')
-    //   'index.ejs',
+    res.render(
+      'index.ejs',)
     //   {
     //     records: allRecords
     //   })
