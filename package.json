@@ -1,0 +1,23 @@
+{
+  "name": "recordstore",
+  "version": "1.0.0",
+  "description": "A Record Store website for Project Week 2 at General Assembly",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Chetv17/recordstore.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Chetv17/recordstore/issues"
+  },
+  "homepage": "https://github.com/Chetv17/recordstore#readme",
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}
