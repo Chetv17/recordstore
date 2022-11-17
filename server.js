@@ -1,15 +1,39 @@
 const express = require('express');
 const mongoose = require('mongoose');
+const methodOverride = require('method-override');
 const app = express();
+const recordsController = require('./controllers/routes.js');
 
 let PORT = 3000;
 if(process.env.PORT){
 	PORT = process.env.PORT
 }
 
-app.get('/', (req, res)=>{
-	res.send('hi');
-})
+app.use(express.urlencoded({extended: true}));
+app.use(methodOverride('_method'));
+app.use('/records', recordsController);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 app.listen(PORT, ()=>{
 	console.log('listening...');
