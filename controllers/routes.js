@@ -1,14 +1,21 @@
 const express = require('express');
 const router = express.Router();
-const Records = require('../models/schema.js');
+const Record = require('../models/schema.js');
 
 
 
 
 
 router.get('/', (req, res)=>{
-	res.send('hi');
-})
+  Record.find({}, (error, allRecords) => {
+    res.render(
+      'index.ejs',
+      {
+        records: allRecords
+      })
+    })
+  });
+
 
 
 
