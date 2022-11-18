@@ -436,78 +436,82 @@ module.exports = [
   copies: 2
 },
 {
-  name: 'Highway 61 Revisited',
-  artist: 'Bob Dylan',
-  cover: 'https://upload.wikimedia.org/wikipedia/en/9/95/Bob_Dylan_-_Highway_61_Revisited.jpg',
-  backcover: 'https://images.genius.com/8ef76a9319fdfcb5321b2de90c7cf880.1000x1000x1.jpg',
-  addartwork: 'https://upload.wikimedia.org/wikipedia/en/2/23/Highway_61_Revisited_single_cover.jpg',
+  name: 'Rumours',
+  artist: 'Fleetwood Mac',
+  cover: 'https://upload.wikimedia.org/wikipedia/en/f/fb/FMacRumours.PNG',
+  backcover: 'https://vinyl-records.nl/rock/photo-gallery/fleetwood-mac/rumours/a0800%20fleetwood%20mac%20rumors%200741.jpg',
+  addartwork: 'https://vinyl-records.nl/rock/photo-gallery/fleetwood-mac/rumours/a0800%20fleetwood%20mac%20rumors%200743.jpg',
   tracklist: [
     {
-    title: 'Like a Rolling Stone',
-    author: 'Dylan'
+    title: 'Second Hand News',
+    author: 'Buckingham'
     },
     {
-    title: 'Tombstone Blues',
-    author: 'Dylan'
+    title: 'Dreams',
+    author: 'Nicks'
     },
     {
-    title: "It Takes a Lot to Laugh, It Takes a Train to Cry",
-    author: 'Dylan'
+    title: "Never Going Back Again",
+    author: 'Buckingham'
     },
     {
-    title: 'From a Buick 6',
-    author: 'Dylan'
+    title: "Don't Stop",
+    author: 'McVie'
     },
     {
-    title: "Ballad of a Thin Man",
-    author: 'Dylan'
+    title: "Go Your Own Way",
+    author: 'Buckingham'
     },
     {
-    title: "Queen Jane Approximately",
-    author: 'Dylan'
+    title: "Songbird",
+    author: 'McVie'
     },
     {
-    title: "Highway 61 Revisited",
-    author: 'Dylan'
+    title: "The Chain",
+    author: 'Buckingham/Fleetwood/McVie/Nicks'
     },
     {
-    title: "Just Like Tom Thumb's Blues",
-    author: 'Dylan'
+    title: "You Make Loving Fun",
+    author: 'McVie'
     },
     {
-    title: "Desolation Row",
-    author: 'Dylan'
+    title: "I Don't Want to Know",
+    author: 'Nicks'
+    },
+    {
+    title: "Oh Daddy",
+    author: 'McVie'
+    },
+    {
+    title: "Gold Dust Woman",
+    author: 'Nicks'
     }
     ],
   musicians: [
     {
-    name: 'Bob Dylan',
-    instrument: 'Vocals'
-    },
-    {
-    name: 'Mike Bloomfield',
+    name: 'Lindsey Buckingham',
     instrument: 'Guitar'
     },
     {
-    name: 'Al Kooper',
-    instrument: 'Organ'
+    name: 'Stevie Nicks',
+    instrument: 'Vocals'
     },
     {
-    name: 'Harvey Brooks',
+    name: 'Christine McVie',
+    instrument: 'Keys'
+    },
+    {
+    name: 'John McVie',
     instrument: 'Bass'
     },
     {
-    name: 'Bruce Langhorne',
-    instrument: 'Tambourine'
-    },
-    {
-    name: 'Bobby Gregg',
+    name: 'Mick Fleetwood',
     instrument: 'Drums'
     }
     ],
-  year: '1965',
-  label: 'Columbia',
-  copies: 2
+  year: '1977',
+  label: 'Warner',
+  copies: 3
 },
 {
 name: 'Whipped Cream & Other Delights',
