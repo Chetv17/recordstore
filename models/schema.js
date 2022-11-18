@@ -2,10 +2,24 @@ const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
 const recordSchema = new Schema ({
-  name: {type: String, required: true},
-  color: {type: String, required: true},
-  readyToEat: Boolean
-});
+  name: String,
+  artist: String,
+  cover: String,
+  backcover: String,
+  addartwork: String,
+  tracklist: [{
+    title: String,
+    author: String
+  }],
+  musicians: [{
+    name: String,
+    instrument: String
+  }],
+  year: String,
+  label: String,
+  copies: Number
+
+}, {timestamps: true});
 
 const Record = mongoose.model('Record', recordSchema);
 

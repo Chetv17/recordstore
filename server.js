@@ -2,7 +2,9 @@ const express = require('express');
 const mongoose = require('mongoose');
 const methodOverride = require('method-override');
 const app = express();
-const recordsController = require('./controllers/routes.js');
+
+
+
 
 let PORT = 3000;
 if(process.env.PORT){
@@ -11,6 +13,10 @@ if(process.env.PORT){
 
 app.use(express.urlencoded({extended: true}));
 app.use(methodOverride('_method'));
+app.use(express.static('public'));
+app.use(express.json());
+
+const recordsController = require('./controllers/routes.js');
 app.use(recordsController);
 
 
@@ -34,11 +40,10 @@ app.use(recordsController);
 
 
 
-
 app.listen(PORT, ()=>{
-	console.log('listening...');
+	console.log('the creature is listening...');
 })
 
-mongoose.connect('[mongodb+srv://chetv17:<arseloaf6>@cluster0.cceqrju.mongodb.net/?retryWrites=true&w=majority]', ()=>{
+mongoose.connect('mongodb+srv://chetv17:EdE6khYsxNbt1lhD@records.pojunds.mongodb.net/?retryWrites=true&w=majority', ()=>{
 	console.log('connected to mongo');
 })
