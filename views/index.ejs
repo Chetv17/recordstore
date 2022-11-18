@@ -7,5 +7,14 @@
   <body>
     <h1>Hello World!</h1>
 
+    <ul>
+      <% for (let i = 0; i < records.length; i++) { %>
+        <li>
+          <img src='<%=records[i].cover%>' />
+        </li>
+
+      <% } %>
+    </ul>
+
   </body>
 </html>

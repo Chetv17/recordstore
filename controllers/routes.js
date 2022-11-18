@@ -17,13 +17,13 @@ router.get('/seed', (req, res) => {
 
 
 router.get('/', (req, res) => {
-  // Record.find({}, (err, allRecords) => {
+  Record.find({}, (err, allRecords) => {
     res.render(
-      'index.ejs',)
-    //   {
-    //     records: allRecords
-    //   })
-    // })
+      'index.ejs',
+      {
+        records: allRecords
+      })
+    })
   });
 
 
