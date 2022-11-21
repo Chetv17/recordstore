@@ -3,12 +3,12 @@
 <%- include ('./partials/head.ejs') %>
 
   <body>
-    <h1>Hello World!</h1>
+    <%- include ('./partials/header.ejs') %>
 
     <ul id='homepage'>
       <% for (let i = 0; i < records.length; i++) { %>
         <li>
-          <a href="/<%=records[i].id%>">
+          <a href='/<%=records[i].id%>'>
           <img src='<%=records[i].cover%>' />
           </a>
         </li>

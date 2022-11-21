@@ -3,8 +3,64 @@
 <%- include ('./partials/head.ejs') %>
 
   <body>
+    <%- include ('./partials/header.ejs') %>
 
-    <h1> SHOW PAGE </h1>
+
+      <h1><%=records.name%></h1>
+      <h2><%=records.artist%></h2>
+
+    <ul>
+        <li>
+          <img src='<%=records.cover%>' />
+        </li>
+        <li>
+          <img src='<%=records.backcover%>' />
+        </li>
+        <li>
+          <img src='<%=records.addartwork%>' />
+        </li>
+    </ul>
+
+    <h4>Track List</h4>
+
+    <table>
+      <tr>
+        <th>Track Title</th>
+        <th>Author</th>
+      </tr>
+      <% for (let i = 0; i < records.tracklist.length; i++) { %>
+      <tr>
+
+        <td><%=records.tracklist[i].title%></td>
+        <td><%=records.tracklist[i].author%></td>
+
+      </tr>
+      <% } %>
+    </table>
+
+    <h4>Musicians</h4>
+
+    <table>
+      <tr>
+        <th>Name</th>
+        <th>Instrument</th>
+      </tr>
+      <% for (let i = 0; i < records.musicians.length; i++) { %>
+      <tr>
+
+        <td><%=records.musicians[i].name%></td>
+        <td><%=records.musicians[i].instrument%></td>
+
+      </tr>
+      <% } %>
+    </table>
+
+    <h4>Release Year: <%=records.year%></h4>
+    <h4><%=records.label%></h4>
+    <h4>In Stock: <%=records.copies%></h4>
+
+
+
 
   </body>
 </html>

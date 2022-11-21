@@ -33,12 +33,12 @@ router.get('/', (req, res) => {
 //                   SHOW
 
 router.get('/:id', (req, res) => {
-  Record.find({}, (err, allRecords) => {
+  Record.findById(req.params.id, (err, showRecords) => {
     res.render(
       'show.ejs',
       {
         tabTitle: 'Record Info',
-        records: allRecords
+        records: showRecords
       })
     })
   });
