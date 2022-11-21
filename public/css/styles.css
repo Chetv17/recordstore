@@ -36,20 +36,18 @@ header {
 	display: flex;
 	justify-content: space-around;
 }
-.images {
-	width: 80%;
+.carouselImages {
+	width: 50%;
 }
 
-.images img {
+.carouselImages img {
 	width: 100%;
 	display: none;
 }
 
-.images img:first-of-type {
+.carouselImages img:first-of-type {
 	display: block;
 }
-
-
 
 .carousel-button {
 	align-self: center;
