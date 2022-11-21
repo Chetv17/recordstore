@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<%- include ('./partials/head.ejs') %>
+
+  <body>
+    <%- include ('./partials/header.ejs') %>
+
+    <img src='<%=records.cover%>' />
+    <h1><%=records.name%></h1>
+    <h2><%=records.artist%></h2>
+
+    <h4>Edit Album Info:</h4>
+
+    <form action="/<%=records.id%>?_method=PUT" method="POST">
+      <label for="Input" class="form-label">Album Name:</label>
+      <input type='text' class="form-control" id="Input" name='name' value='<%=records.name%>' />
+
+      <label for="Input" class="form-label">Artist Name:</label>
+      <input type='text' class="form-control" id="Input" name='artist' value='<%=records.artist%>' />
+
+      <label for="Input" class="form-label">Cover Art:</label>
+      <input type='text' class="form-control" id="Input" name='cover' value='Paste Image Link Here' />
+
+      <label for="Input" class="form-label">Back Cover Art:</label>
+      <input type='text' class="form-control" id="Input" name='backcover' value='Paste Image Link Here' />
+
+      <label for="Input" class="form-label">Any Additional Art:</label>
+      <input type='text' class="form-control" id="Input" name='addartwork' value='Paste Image Link Here' />
+
+      <h4>Track List</h4>
+
+      <table>
+        <tr>
+          <th><label for="Input" class="form-label">Track Title:</label></th>
+          <th><label for="Input" class="form-label">Author:</label></th>
+        </tr>
+        <% for (let i = 0; i < records.tracklist.length; i++) { %>
+        <tr>
+
+          <td>
+            <input type='text' class="form-control" id="Input" name='tracklist.title' value='<%=records.tracklist[i].title%>' />
+            </td>
+          <td>
+            <input type='text' class="form-control" id="Input" name='tracklist.author' value='<%=records.tracklist[i].author%>' />
+            </td>
+
+        </tr>
+        <% } %>
+      </table>
+
+      <h4>Musicians</h4>
+
+      <table>
+        <tr>
+          <th><label for="Input" class="form-label">Name:</label></th>
+          <th><label for="Input" class="form-label">Instrument:</label></th>
+        </tr>
+        <% for (let i = 0; i < records.musicians.length; i++) { %>
+        <tr>
+
+          <td>
+            <input type='text' class="form-control" id="Input" name='musicians.name' value='<%=records.musicians[i].name%>' />
+            </td>
+          <td>
+            <input type='text' class="form-control" id="Input" name='musicians.instrument' value='<%=records.musicians[i].instrument%>' />
+            </td>
+
+        </tr>
+        <% } %>
+      </table>
+
+    <label for="Input" class="form-label">Release Year:</label>
+    <input type='text' class="form-control" id="Input" name='year' value='<%=records.year%>' />
+
+    <label for="Input" class="form-label">Record Label:</label>
+    <input type='text' class="form-control" id="Input" name='label' value='<%=records.label%>' />
+
+    <label for="Input" class="form-label">Stock:</label>
+    <input type='text' class="form-control" id="Input" name='copies' value=<%=records.copies%> />
+
+    </form>
+
+
+  </body>
+</html>

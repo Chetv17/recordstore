@@ -43,6 +43,26 @@ router.get('/:id', (req, res) => {
     })
   });
 
+  //                 Edit
+
+  router.put('/:id', (req, res) => {
+    Record.findByIdAndUpdate(req.params.id, req.body, {new:true}, (err, updatedRecords) => {
+        res.redirect('/')
+    })
+});
+
+router.get('/:id/edit', (req, res) => {
+    Record.findById(req.params.id, (err, editRecords) => {
+        res.render(
+            'edit.ejs',
+            {
+                tabTitle: 'Edit Info',
+                records: editRecords
+            }
+        )
+    })
+});
+
 
 
 
