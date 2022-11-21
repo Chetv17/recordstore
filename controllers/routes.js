@@ -17,6 +17,36 @@ router.get('/seed', (req, res) => {
 
 //                  ROUTES
 
+//                    NEW
+
+router.get('/new', (req, res) => {
+  Record.find({}, (err, newRecords) => {
+    res.render(
+      'new.ejs',
+      {
+        tabTitle: 'New Record',
+        records: newRecords
+      })
+    })
+  });
+
+//                   POST
+
+router.post('/', (req, res) =>{
+  Record.create(req.body, (error, createdRecord) => {
+        res.redirect('/');
+    })
+});
+
+//                   DELETE
+
+// DELETE
+router.delete('/:id', (req, res) => {
+    Record.findByIdAndRemove(req.params.id, (err, data)=> {
+      res.redirect('/');
+    })
+});
+
 //                   INDEX
 
 router.get('/', (req, res) => {

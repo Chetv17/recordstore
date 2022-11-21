@@ -19,15 +19,15 @@
       <input type='text' class="form-control" id="Input" name='artist' value='<%=records.artist%>' />
 
       <label for="Input" class="form-label">Cover Art:</label>
-      <input type='text' class="form-control" id="Input" name='cover' value='Paste Image Link Here' />
+      <input type='text' class="form-control" id="Input" name='cover'  value='<%=records.cover%>'/>
 
       <label for="Input" class="form-label">Back Cover Art:</label>
-      <input type='text' class="form-control" id="Input" name='backcover' value='Paste Image Link Here' />
+      <input type='text' class="form-control" id="Input" name='backcover'  value='<%=records.backcover%>'/>
 
       <label for="Input" class="form-label">Any Additional Art:</label>
-      <input type='text' class="form-control" id="Input" name='addartwork' value='Paste Image Link Here' />
+      <input type='text' class="form-control" id="Input" name='addartwork'  value='<%=records.addartwork%>'/>
 
-      <h4>Track List</h4>
+      <!-- <h4>Track List</h4>
 
       <table>
         <tr>
@@ -67,7 +67,7 @@
 
         </tr>
         <% } %>
-      </table>
+      </table> -->
 
     <label for="Input" class="form-label">Release Year:</label>
     <input type='text' class="form-control" id="Input" name='year' value='<%=records.year%>' />
@@ -78,7 +78,17 @@
     <label for="Input" class="form-label">Stock:</label>
     <input type='text' class="form-control" id="Input" name='copies' value=<%=records.copies%> />
 
+    <button type="button">
+    <input type='submit' value='Edit Info' />
+    </button>
+
     </form>
+
+    <button type="button" class="btn btn-danger">
+            <form action="/<%=records.id%>?_method=DELETE" method="POST">
+                <input type="submit" value="Delete" style='border: none; color: black; background: none;'/>
+            </form>
+        </button>
 
 
   </body>

@@ -1,5 +1,14 @@
 /* STYLESHEET */
 
-#homepage {
+header {
+  background-color: lightgrey;
+}
+
+#recordList {
   list-style: none;
+}
+
+#logo {
+  width: 70px;
+  height: auto;
 }

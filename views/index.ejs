@@ -2,10 +2,10 @@
 <html lang="en" dir="ltr">
 <%- include ('./partials/head.ejs') %>
 
-  <body>
+<body>
     <%- include ('./partials/header.ejs') %>
 
-    <ul id='homepage'>
+    <ul id='recordList'>
       <% for (let i = 0; i < records.length; i++) { %>
         <li>
           <a href='/<%=records[i].id%>'>
@@ -16,5 +16,9 @@
       <% } %>
     </ul>
 
-  </body>
+  <button>
+    <a href="/new">Add New Inventory</a>
+  </button>
+
+</body>
 </html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <%- include ('./partials/head.ejs') %>
+
+  <body>
+    <%- include ('./partials/header.ejs') %>
+
+    <h4>Add New Album:</h4>
+
+    <form action="/" method="POST">
+      <label for="Input" class="form-label">Album Name:</label>
+      <input type='text' class="form-control" id="Input" name='name' placeholder='Album Name' />
+
+      <label for="Input" class="form-label">Artist Name:</label>
+      <input type='text' class="form-control" id="Input" name='artist' placeholder='Artist Name' />
+
+      <label for="Input" class="form-label">Cover Art:</label>
+      <input type='text' class="form-control" id="Input" name='cover' placeholder='Cover Art' />
+
+      <label for="Input" class="form-label">Back Cover Art:</label>
+      <input type='text' class="form-control" id="Input" name='backcover' placeholder='Back Cover Art' />
+
+      <label for="Input" class="form-label">Any Additional Art:</label>
+      <input type='text' class="form-control" id="Input" name='addartwork' placeholder='Any Additional Art' />
+
+    
+
+    <label for="Input" class="form-label">Release Year:</label>
+    <input type='text' class="form-control" id="Input" name='year' placeholder='Release Year' />
+
+    <label for="Input" class="form-label">Record Label:</label>
+    <input type='text' class="form-control" id="Input" name='label' placeholder='Record Label' />
+
+    <label for="Input" class="form-label">Stock:</label>
+    <input type='number' class="form-control" id="Input" name='copies' placeholder='Number of Copies' />
+
+    <button type="button">
+    <input type='submit' value='Create' />
+    </button>
+
+    </form>
+
+  </body>
+</html>
