@@ -15,17 +15,33 @@ router.get('/seed', (req, res) => {
 });
 
 
+//                  ROUTES
+
+//                   INDEX
 
 router.get('/', (req, res) => {
   Record.find({}, (err, allRecords) => {
     res.render(
       'index.ejs',
       {
+        tabTitle: 'Homepage',
         records: allRecords
       })
     })
   });
 
+//                   SHOW
+
+router.get('/:id', (req, res) => {
+  Record.find({}, (err, allRecords) => {
+    res.render(
+      'show.ejs',
+      {
+        tabTitle: 'Record Info',
+        records: allRecords
+      })
+    })
+  });
 
 
 
