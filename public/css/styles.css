@@ -1,14 +1,61 @@
 /* STYLESHEET */
 
+
+/* HEADER PARTIAL */
+
 header {
   background-color: lightgrey;
-}
-
-#recordList {
-  list-style: none;
 }
 
 #logo {
   width: 70px;
   height: auto;
+}
+
+/* LISTS */
+
+#recordList {
+  list-style: none;
+}
+
+/* INDEX PAGE */
+
+.images {
+  width: 20%;
+  height: 20%;
+}
+
+/* SHOW PAGE */
+
+
+
+
+/* CAROUSEL */
+.cc {
+	width: 70%;
+	display: flex;
+	justify-content: space-around;
+}
+.images {
+	width: 80%;
+}
+
+.images img {
+	width: 100%;
+	display: none;
+}
+
+.images img:first-of-type {
+	display: block;
+}
+
+
+
+.carousel-button {
+	align-self: center;
+	padding: 10px;
+
+}
+.carousel-button:hover {
+	cursor: pointer;
 }

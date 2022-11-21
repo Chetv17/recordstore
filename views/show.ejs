@@ -2,6 +2,7 @@
 <html lang="en" dir="ltr">
 <%- include ('./partials/head.ejs') %>
 
+
   <body>
     <%- include ('./partials/header.ejs') %>
 
@@ -9,17 +10,28 @@
       <h1><%=records.name%></h1>
       <h2><%=records.artist%></h2>
 
-    <ul id='recordList'>
-        <li>
-          <img src='<%=records.cover%>' />
-        </li>
-        <li>
-          <img src='<%=records.backcover%>' />
-        </li>
-        <li>
-          <img src='<%=records.addartwork%>' />
-        </li>
-    </ul>
+
+  <div class='c'>
+
+      <div class='cc'>
+        <div id='previousbtn' class='carousel-button'>
+          <span class='lnr lnr-chevron-left'></span>
+        </div>
+          <div class='images'>
+
+           <img src="<%=records.cover%>" />
+
+           <img src="<%=records.backcover%>" />
+
+           <img src="<%=records.addartwork%>" />
+
+          </div>
+        <div id='nextbtn' class='carousel-button'>
+          <span class='lnr lnr-chevron-right'></span>
+        </div>
+
+      </div>
+  </div>
 
     <h4>Track List</h4>
 
