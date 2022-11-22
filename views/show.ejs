@@ -11,13 +11,13 @@
       <h2><%=records.artist%></h2>
 
 
-  <div class='c'>
+  <div class='c' style="position: relative; left: 14%; margin-bottom: 10px;">
 
       <div class='cc'>
         <div id='previousbtn' class='carousel-button'>
           <span class='lnr lnr-chevron-left'></span>
         </div>
-          <div class='carouselImages'>
+          <div class='carouselImages' style="box-shadow: 2px 2px 2px lightgrey;">
 
            <img src="<%=records.cover%>" />
 
@@ -33,47 +33,55 @@
       </div>
   </div>
 
-    <h4>Track List</h4>
 
-    <table>
-      <tr>
+  <div class="container-fluid" style="width: 50%;">
+    <h4 style="text-align: center;">Track List</h4>
+
+
+    <table class="table table-striped">
+      <thead>
+       <tr>
         <th>Track Title</th>
         <th>Author</th>
-      </tr>
+       </tr>
+      </thead>
       <% for (let i = 0; i < records.tracklist.length; i++) { %>
-      <tr>
+       <tr>
 
         <td><%=records.tracklist[i].title%></td>
         <td><%=records.tracklist[i].author%></td>
 
-      </tr>
+        </tr>
       <% } %>
-    </table>
+     </table>
+  </div>
+  <div class="container-fluid" style="width: 50%;">
+    <h4 style="text-align: center;">Musicians</h4>
 
-    <h4>Musicians</h4>
-
-    <table>
-      <tr>
+     <table class="table table-striped">
+      <thead>
+       <tr>
         <th>Name</th>
         <th>Instrument</th>
-      </tr>
+       </tr>
+      </thead>
       <% for (let i = 0; i < records.musicians.length; i++) { %>
-      <tr>
+       <tr>
 
         <td><%=records.musicians[i].name%></td>
         <td><%=records.musicians[i].instrument%></td>
 
-      </tr>
+       </tr>
       <% } %>
-    </table>
+     </table>
+    </div>
+    <h4 style="text-align: center;">Release Year: <%=records.year%></h4>
+    <h4 style="text-align: center;"><%=records.label%></h4>
+    <h4 style="text-align: center;">In Stock: <%=records.copies%></h4>
 
-    <h4>Release Year: <%=records.year%></h4>
-    <h4><%=records.label%></h4>
-    <h4>In Stock: <%=records.copies%></h4>
-
-    <button>
-      <a href="/<%=records.id%>/edit">Edit</a>
-    </button>
+<button type="button" class="btn btn-secondary" style="position: relative; left: 47%; margin-bottom: 10px;">
+      <a style="text-decoration: none; color: white;" href="/<%=records.id%>/edit">Edit</a>
+</button>
 
 
 

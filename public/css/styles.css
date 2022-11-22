@@ -1,5 +1,8 @@
 /* STYLESHEET */
 
+body {
+  background:rgb(247,247,247);
+}
 
 /* HEADER PARTIAL */
 
@@ -9,8 +12,8 @@ header {
 
 .dropdown {
   position: absolute;
-  top: 0;
-  right: 0;
+  top: 3px;
+  right: 3px;
 }
 
 #logo {
@@ -27,7 +30,9 @@ header {
 
 /* FOOTER */
 
-
+#footDiv {
+  height: 280px;
+}
 
 #search {
   width: 250px;
@@ -88,8 +93,6 @@ header {
 /* SHOW PAGE */
 
 
-
-
 /* CAROUSEL */
 .cc {
 	width: 70%;
@@ -142,7 +145,7 @@ header {
   }
 
   #search {
-    top: 210px;
+    top: 200px;
     left: 2px;
   }
 
