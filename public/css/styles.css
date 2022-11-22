@@ -45,6 +45,11 @@ header {
 
 /* INDEX PAGE */
 
+.cardAlbum {
+   width: 18rem;
+   margin: 10px;
+}
+
 #stacks {
   width: 60%;
   height: auto;
@@ -122,9 +127,10 @@ header {
   }
 
   .dropdown {
-    top: 60px;
+    top: 57px;
     left: 0;
   }
+
   #frontH1 {
     font-size: 20px;
   }
@@ -133,9 +139,15 @@ header {
     top: 210px;
     left: 2px;
   }
+
   .images {
     width: 80px;
     height: 80px;
+  }
+
+  .cardAlbum {
+     width: 11rem;
+     margin: 10px;
   }
 
 }

@@ -5,7 +5,7 @@
 <body>
     <%- include ('./partials/header.ejs') %>
 
-    <h1 style="text-align: center;"> Country </h1>
+    <h1 id="frontH1" style="text-align: center;"> Country </h1>
 
     <ul>
       <div id="albumArt" class="row">
@@ -15,7 +15,7 @@
 
         <div class="col"
         <li >
-          <div class="card" style="width: 18rem; margin: 10px;">
+          <div class="card cardAlbum">
             <a href='/<%=records[i].id%>'>
             <img class='images' src='<%=records[i].cover%>' />
             </a>
