@@ -102,6 +102,27 @@ router.get('/rock', (req, res) => {
           })
         });
 
+        //                  SEARCH
+
+        router.post('/search', (req, res) =>{
+          Record.find( { $text: { $search: req.body.searchTerm, $diacriticSensitive: true }}, (err, findRecords) => {
+            res.render(
+              'search.ejs',
+              {
+                tabTitle: 'Search',
+                records: findRecords
+              })
+            })
+          });
+
+        router.get('/:id', (req, res) => {
+            res.render(
+              'search.ejs',
+              {
+                tabTitle: 'Search',
+              })
+          });
+
 //                   SHOW
 
 router.get('/:id', (req, res) => {
@@ -134,6 +155,7 @@ router.get('/:id/edit', (req, res) => {
         )
     })
 });
+
 
 
 

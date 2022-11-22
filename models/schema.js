@@ -23,6 +23,9 @@ const recordSchema = new Schema ({
 
 }, {timestamps: true});
 
+// recordSchema.index({name: 'text', artist: 'text'});
+// recordSchema.index({"$**" : 'text'});
+
 const Record = mongoose.model('Record', recordSchema);
 
 module.exports = Record;
