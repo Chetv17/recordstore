@@ -31,6 +31,7 @@ header {
 
 #search {
   width: 250px;
+  height: 37px;
   position: absolute;
   top: 2px;
   right: 2px;
@@ -48,6 +49,11 @@ header {
 .cardAlbum {
    width: 18rem;
    margin: 10px;
+
+}
+
+.cardAlbum:hover {
+  box-shadow: 2px 2px 2px lightgrey;
 }
 
 #stacks {

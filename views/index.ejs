@@ -22,20 +22,22 @@
         <% if(records[i].newArrival === true) { %>
 
 
-        <div class="col"
+        <div class="col">
+          <a style="text-decoration: none; color: black;" href='/<%=records[i].id%>'>
         <li >
           <div class="card cardAlbum">
-            <a href='/<%=records[i].id%>'>
+
             <img class='images' src='<%=records[i].cover%>' />
-            </a>
+
            <div class="card-body">
              <h6 class="card-title" style="text-align: left;"><%=records[i].name%><br/><%=records[i].artist%></h6>
 
            </div>
 
           </div>
-        </li>
 
+        </li>
+        </a>
         </div>
 
         <% } %>
