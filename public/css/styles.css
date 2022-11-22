@@ -7,9 +7,22 @@ header {
   background-color: lightgrey;
 }
 
+.dropdown {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
 #logo {
   width: 70px;
   height: auto;
+}
+
+#new {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+
 }
 
 /* LISTS */
@@ -23,6 +36,11 @@ header {
 .images {
   width: 20%;
   height: 20%;
+}
+
+.frontPage {
+  position: absolute;
+  top: 100px;
 }
 
 /* SHOW PAGE */
@@ -56,4 +74,28 @@ header {
 }
 .carousel-button:hover {
 	cursor: pointer;
+}
+
+
+
+
+
+
+
+
+
+
+@media (max-width: 400px) {
+  header {
+    height: 55px;
+  }
+  .dropdown {
+    top: 60px;
+    left: 0;
+  }
+  #frontH1 {
+    font-size: 20px;
+  }
+
+
 }

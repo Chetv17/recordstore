@@ -5,6 +5,9 @@
 <body>
     <%- include ('./partials/header.ejs') %>
 
+
+  <div class="container-fluid frontPage">
+    <h1 id="frontH1" style="text-align: center;"> Re-Stocks and New Arrivals!! </h1>
     <ul id='recordList'>
       <% for (let i = 0; i < records.length; i++) { %>
         <li >
@@ -16,9 +19,9 @@
       <% } %>
     </ul>
 
-  <button>
-    <a href="/new">Add New Inventory</a>
-  </button>
+<%- include ('./partials/footer.ejs') %>
+  </div>
+
 
 </body>
 </html>
