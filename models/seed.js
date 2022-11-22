@@ -861,4 +861,164 @@ copies: 1,
 genre: 'rock',
 newArrival: true
 },
+{
+  name: 'Kind of Blue',
+  artist: 'Miles Davis',
+  cover: 'https://upload.wikimedia.org/wikipedia/en/thumb/9/9c/MilesDavisKindofBlue.jpg/220px-MilesDavisKindofBlue.jpg',
+  backcover: 'https://m.media-amazon.com/images/I/51KkCskX-CL._SY580_.jpg',
+  addartwork: 'https://m.media-amazon.com/images/I/51KkCskX-CL._SY580_.jpg',
+  tracklist: [
+    {
+    title: 'So What',
+    author: 'Davis'
+    },
+    {
+    title: 'Freddie Freeloader',
+    author: 'Davis'
+    },
+    {
+    title: "Blue in Green",
+    author: 'Davis/Evans'
+    },
+    {
+    title: 'All Blues',
+    author: 'Davis'
+    },
+    {
+    title: "Flamenco Sketches",
+    author: 'Davis/Evans'
+    }
+    ],
+  musicians: [
+    {
+    name: 'Miles Davis',
+    instrument: 'Trumpet'
+    },
+    {
+    name: 'Julian Adderley',
+    instrument: 'Alto Saxophone'
+    },
+    {
+    name: 'John Coltrane',
+    instrument: 'Tenor Saxophone'
+    },
+    {
+    name: 'Bill Evans',
+    instrument: 'Piano'
+    },
+    {
+    name: 'Wynton Kelly',
+    instrument: 'Piano'
+    },
+    {
+    name: 'Jimmy Cobb',
+    instrument: 'Drums'
+    }
+    ],
+  year: '1959',
+  label: 'Columbia',
+  copies: 2,
+  genre: 'jazz',
+  newArrival: false
+},
+{
+  name: 'A Love Supreme',
+  artist: 'John Coltrane',
+  cover: 'https://upload.wikimedia.org/wikipedia/en/9/9a/John_Coltrane_-_A_Love_Supreme.jpg',
+  backcover: 'https://upload.wikimedia.org/wikipedia/commons/thumb/5/50/Elvin_Jones_3.jpg/800px-Elvin_Jones_3.jpg',
+  addartwork: 'https://upload.wikimedia.org/wikipedia/commons/thumb/5/50/Elvin_Jones_3.jpg/800px-Elvin_Jones_3.jpg',
+  tracklist: [
+    {
+    title: 'Part 1: Acknowledgement',
+    author: 'Coltrane'
+    },
+    {
+    title: 'Part 2: Resolution',
+    author: 'Coltrane'
+    },
+    {
+    title: "Part 3: Pursuance / Part 4: Psalm",
+    author: 'Coltrane'
+    }
+    ],
+  musicians: [
+    {
+    name: 'Jimmy Garrison',
+    instrument: 'Double Bass'
+    },
+    {
+    name: 'Elvin Jones',
+    instrument: 'Drums'
+    },
+    {
+    name: 'John Coltrane',
+    instrument: 'Tenor Saxophone'
+    },
+    {
+    name: 'McCoy Tyner',
+    instrument: 'Piano'
+    }
+    ],
+  year: '1965',
+  label: 'Impulse!',
+  copies: 2,
+  genre: 'jazz',
+  newArrival: false
+},
+{
+  name: 'Red Headed Stranger',
+  artist: 'Willie Nelson',
+  cover: 'https://upload.wikimedia.org/wikipedia/en/a/a4/WillieNelsonRedHeadedStrangeralbumcover.jpg',
+  backcover: 'https://superhypeblog.com/wp-content/uploads/2014/09/Willie-Nelson-Red-Headed-Stranger-Back-768x775.jpg',
+  addartwork: 'https://superhypeblog.com/wp-content/uploads/2014/09/willdallas.jpg',
+  tracklist: [
+    {
+    title: 'Time of the Preacher',
+    author: 'Nelson'
+    },
+    {
+    title: 'Part 2: Resolution',
+    author: 'Coltrane'
+    },
+    {
+    title: "I Couldn't Believe It Was True",
+    author: 'Arnold/Fowler'
+    },
+    {
+    title: "Time of the Preacher Theme",
+    author: 'Nelson'
+    },
+    {
+    title: "Blue Rock Montana / Red Headed Stranger",
+    author: 'Nelson'
+    },
+    {
+    title: 	"Blue Eyes Crying in the Rain",
+    author: 'Rose'
+    }
+    ],
+  musicians: [
+    {
+    name: 'Willie Nelson',
+    instrument: 'Guitar'
+    },
+    {
+    name: 'Paul English',
+    instrument: 'Drums'
+    },
+    {
+    name: 'Jody Payne',
+    instrument: 'Mandolin'
+    },
+    {
+    name: 'Bobbie Nelson',
+    instrument: 'Piano'
+    }
+    ],
+  year: '1975',
+  label: 'Columbia',
+  copies: 2,
+  genre: 'country',
+  newArrival: false
+},
 ];
