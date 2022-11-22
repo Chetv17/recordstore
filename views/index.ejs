@@ -8,19 +8,25 @@
 
   <div class="container-fluid frontPage">
     <h1 id="frontH1" style="text-align: center;"> Re-Stocks and New Arrivals!! </h1>
+
     <ul id='recordList'>
+      <div id="albumArt" class="row">
       <% for (let i = 0; i < records.length; i++) { %>
+        <div class="col"
         <li >
           <a href='/<%=records[i].id%>'>
           <img class='images' src='<%=records[i].cover%>' />
           </a>
         </li>
-
+        </div>
       <% } %>
+      </div>
     </ul>
-
 <%- include ('./partials/footer.ejs') %>
   </div>
+
+
+
 
 
 </body>

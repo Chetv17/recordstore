@@ -25,6 +25,27 @@ header {
 
 }
 
+/* FOOTER */
+
+footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+}
+
+#footDiv {
+  height: 170px;
+  margin: 20px;
+}
+
+#search {
+  width: 250px;
+  position: absolute;
+  top: 2px;
+  right: 2px;
+}
+
 /* LISTS */
 
 #recordList {
@@ -33,13 +54,22 @@ header {
 
 /* INDEX PAGE */
 
+#albumArt {
+  text-align: left;
+  width: auto;
+  height: auto;
+}
+
 .images {
-  width: 20%;
-  height: 20%;
+  width: 200px;
+  height: 200px;
+  margin: 10px;
 }
 
 .frontPage {
   position: absolute;
+  right: 0;
+  width: 75%;
   top: 100px;
 }
 
@@ -85,10 +115,11 @@ header {
 
 
 
-@media (max-width: 400px) {
+@media (max-width: 509px) {
   header {
     height: 55px;
   }
+
   .dropdown {
     top: 60px;
     left: 0;
@@ -97,5 +128,16 @@ header {
     font-size: 20px;
   }
 
+  #search {
+    top: 200px;
+    left: 2px;
+  }
+  .images {
+    width: 80px;
+    height: 80px;
+  }
+  #footDiv {
+    height: 300px;
+  }
 
 }
