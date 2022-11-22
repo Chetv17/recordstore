@@ -115,13 +115,13 @@ router.get('/rock', (req, res) => {
             })
           });
 
-        router.get('/:id', (req, res) => {
-            res.render(
-              'search.ejs',
-              {
-                tabTitle: 'Search',
-              })
-          });
+        // router.get('/:id', (req, res) => {
+        //     res.render(
+        //       'search.ejs',
+        //       {
+        //         tabTitle: 'Search',
+        //       })
+        //   });
 
 //                   SHOW
 
