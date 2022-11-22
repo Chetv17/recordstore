@@ -102,7 +102,9 @@ module.exports = [
     }],
   year: '1969',
   label: 'Apple',
-  copies: 5
+  copies: 5,
+  genre: 'rock',
+  newArrival: true
 },
 
 {
@@ -213,7 +215,9 @@ module.exports = [
     ],
   year: '1972',
   label: 'Reprise',
-  copies: 3
+  copies: 3,
+  genre: 'rock',
+  newArrival: true
 },
 
 {
@@ -284,7 +288,9 @@ module.exports = [
     ],
   year: '1973',
   label: 'Capitol',
-  copies: 4
+  copies: 4,
+  genre: 'rock',
+  newArrival: true
 },
 {
   name: 'Let It Bleed',
@@ -358,7 +364,9 @@ module.exports = [
     ],
   year: '1969',
   label: 'Decca',
-  copies: 2
+  copies: 2,
+  genre: 'rock',
+  newArrival: true
 },
 
 {
@@ -433,7 +441,9 @@ module.exports = [
     ],
   year: '1965',
   label: 'Columbia',
-  copies: 2
+  copies: 2,
+  genre: 'rock',
+  newArrival: true
 },
 {
   name: 'Rumours',
@@ -511,7 +521,9 @@ module.exports = [
     ],
   year: '1977',
   label: 'Warner',
-  copies: 3
+  copies: 3,
+  genre: 'rock',
+  newArrival: true
 },
 {
 name: 'Whipped Cream & Other Delights',
@@ -597,7 +609,9 @@ musicians: [
   ],
 year: '1965',
 label: 'A&M Records',
-copies: 1000
+copies: 1000,
+genre: 'jazz',
+newArrival: false
 },
 {
 name: 'Surrealistic Pillow',
@@ -687,7 +701,9 @@ musicians: [
   ],
 year: '1967',
 label: 'A&M Records',
-copies: 6
+copies: 6,
+genre: 'rock',
+newArrival: true
 },
 {
 name: 'Lola Versus Powerman and the Moneygoround, Part One',
@@ -773,7 +789,9 @@ musicians: [
   ],
 year: '1970',
 label: 'Reprise',
-copies: 4
+copies: 4,
+genre: 'rock',
+newArrival: true
 },
 {
 name: 'The Stooges',
@@ -839,6 +857,8 @@ musicians: [
   ],
 year: '1969',
 label: 'Elekra',
-copies: 1
+copies: 1,
+genre: 'rock',
+newArrival: true
 },
 ];

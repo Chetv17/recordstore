@@ -17,7 +17,9 @@ const recordSchema = new Schema ({
   }],
   year: String,
   label: String,
-  copies: Number
+  copies: Number,
+  genre: String,
+  newArrival: Boolean
 
 }, {timestamps: true});
 

@@ -17,6 +17,9 @@ router.get('/seed', (req, res) => {
 
 //                  ROUTES
 
+
+
+
 //                    NEW
 
 router.get('/new', (req, res) => {
@@ -60,6 +63,45 @@ router.get('/', (req, res) => {
     })
   });
 
+//                  ROCK
+
+router.get('/rock', (req, res) => {
+  Record.find({}, (err, rockRecords) => {
+    res.render(
+      'rock.ejs',
+      {
+        tabTitle: 'Rock',
+        records: rockRecords
+      })
+    })
+  });
+
+    //                  COUNTRY
+
+    router.get('/country', (req, res) => {
+      Record.find({}, (err, countryRecords) => {
+        res.render(
+          'country.ejs',
+          {
+            tabTitle: 'Country',
+            records: countryRecords
+          })
+        })
+      });
+
+      //                  JAZZ
+
+      router.get('/jazz', (req, res) => {
+        Record.find({}, (err, jazzRecords) => {
+          res.render(
+            'jazz.ejs',
+            {
+              tabTitle: 'Jazz',
+              records: jazzRecords
+            })
+          })
+        });
+
 //                   SHOW
 
 router.get('/:id', (req, res) => {
@@ -73,7 +115,7 @@ router.get('/:id', (req, res) => {
     })
   });
 
-  //                 Edit
+  //                 EDIT
 
   router.put('/:id', (req, res) => {
     Record.findByIdAndUpdate(req.params.id, req.body, {new:true}, (err, updatedRecords) => {
@@ -92,6 +134,7 @@ router.get('/:id/edit', (req, res) => {
         )
     })
 });
+
 
 
 
