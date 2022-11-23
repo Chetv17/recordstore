@@ -1,10 +1,18 @@
+// DEPENDENCIES //
+
 const express = require('express');
 const mongoose = require('mongoose');
 const methodOverride = require('method-override');
 const app = express();
+//login
+// const bcrypt = require('bcrypt');
+// const session = require('express-session');
+// const userController = require('./controllers/users_controller.js')
+// app.use('/users', userController)
 
 
 
+// CONFIGURATION //
 
 let PORT = 3000;
 if(process.env.PORT){
@@ -16,8 +24,15 @@ app.use(methodOverride('_method'));
 app.use(express.static('public'));
 app.use(express.json());
 
+
+
+// CONTROLLERS //
+
 const recordsController = require('./controllers/routes.js');
 app.use(recordsController);
+
+// const sessionsController = require('./controllers/sessions_controller');
+// app.use('/sessions', sessionsController);
 
 
 
