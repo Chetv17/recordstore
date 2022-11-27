@@ -152,12 +152,12 @@ router.get('/:id/edit', (req, res) => {
   //                   SHOW
 
   router.get('/:id', (req, res) => {
-    Record.findById(req.params.id, (err, allRecords) => {
+    Record.findById(req.params.id, (err, showRecords) => {
       res.render(
         'show.ejs',
         {
           tabTitle: 'Record Info',
-          records: allRecords
+          records: showRecords
         })
       })
     });

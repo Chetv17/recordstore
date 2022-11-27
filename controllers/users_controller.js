@@ -5,14 +5,22 @@ const User = require('../models/users.js')
 
 // LOGIN / REGISTER
 
-users.post('/register', (req, res) => {
-  //overwrite the user password with the hashed password, then pass that in to our database
-  req.body.password = bcrypt.hashSync(req.body.password, bcrypt.genSaltSync(10))
-  User.create(req.body, (err, createdUser) => {
-    console.log('user is created', createdUser)
-    res.redirect('/')
-  })
-})
+users.get('/register', (req, res) => {
+    res.render(
+      'register.ejs',
+      {
+        tabTitle: 'register',
+      })
+  });
+
+  users.post('/register', (req, res) => {
+    req.body.password = bcrypt.hashSync(req.body.password, bcrypt.genSaltSync(10))
+    User.create(req.body, (err, createdUser) => {
+      console.log('user is created', createdUser)
+      res.redirect('/login')
+    })
+  });
+
 
 users.get('/login', (req, res) => {
     res.render(
@@ -22,14 +30,30 @@ users.get('/login', (req, res) => {
       })
   });
 
-users.get('/register', (req, res) => {
-    res.render(
-      'register.ejs',
-      {
-        tabTitle: 'register',
-      })
-  });
+
 
 
 
 module.exports = users
+
+
+
+
+
+
+// users.post('/register', async (req, res) => {
+//
+//   try {
+//     const hashedPassword = await bcrypt.hash(req.body.password, 10)
+//     User.create({
+//       id: Date.now().toString(),
+//       fullname: req.body.fullname,
+//       email: req.body.email,
+//       password: hashedPassword,
+//     })
+//     res.redirect('/login')
+//   } catch (e) {
+//     console.log(e);
+//     res-redirect('/register')
+//   }
+// })

@@ -5,7 +5,7 @@ const mongoose = require('mongoose');
 const methodOverride = require('method-override');
 const app = express();
 //login
-const bcrypt = require('bcrypt');
+// const bcrypt = require('bcrypt');
 // require("dotenv").config();
 // const session = require('express-session');
 
