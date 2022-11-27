@@ -149,26 +149,6 @@ router.get('/:id/edit', (req, res) => {
 });
 
 
-
-
-// LOGIN / REGISTER
-
-router.get('/login', (req, res) => {
-    res.render(
-      'login.ejs',
-      {
-        tabTitle: 'login',
-      })
-  });
-
-router.get('/register', (req, res) => {
-    res.render(
-      'register.ejs',
-      {
-        tabTitle: 'register',
-      })
-  });
-
   //                   SHOW
 
   router.get('/:id', (req, res) => {
@@ -197,3 +177,30 @@ router.get('/register', (req, res) => {
 
 
 module.exports = router;
+
+
+
+
+// // LOGIN / REGISTER
+//
+// router.post.post('/register', (req, res) =>{
+//   Record.create(req.body, (error, createdRecord) => {
+//         res.redirect('/');
+//     })
+// });
+//
+// router.get('/login', (req, res) => {
+//     res.render(
+//       'login.ejs',
+//       {
+//         tabTitle: 'login',
+//       })
+//   });
+//
+// router.get('/register', (req, res) => {
+//     res.render(
+//       'register.ejs',
+//       {
+//         tabTitle: 'register',
+//       })
+//   });
