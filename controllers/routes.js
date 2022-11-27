@@ -18,8 +18,6 @@ router.get('/seed', (req, res) => {
 //                  ROUTES
 
 
-
-
 //                    NEW
 
 router.get('/new', (req, res) => {
@@ -63,18 +61,20 @@ router.get('/', (req, res) => {
     })
   });
 
-//                  ROCK
 
-router.get('/rock', (req, res) => {
-  Record.find({}, (err, rockRecords) => {
-    res.render(
-      'rock.ejs',
-      {
-        tabTitle: 'Rock',
-        records: rockRecords
+
+    //                  ROCK
+
+    router.get('/rock', (req, res) => {
+      Record.find({}, (err, rockRecords) => {
+        res.render(
+        'rock.ejs',
+        {
+          tabTitle: 'Rock',
+          records: rockRecords
+        })
       })
-    })
-  });
+    });
 
     //                  COUNTRY
 
@@ -106,7 +106,7 @@ router.get('/rock', (req, res) => {
         // This youtube video helped me: https://www.youtube.com/watch?v=OEdPH4fV7vY
         // Although, his code looks much different, and he had a section in his schema which I discovered does nothing for me... yet somehow this still works?
 
-        
+
         router.post('/search', (req, res) =>{
           Record.find( { $text: { $search: req.body.searchTerm, $diacriticSensitive: true }}, (err, findRecords) => {
             res.render(
@@ -126,18 +126,7 @@ router.get('/rock', (req, res) => {
         //       })
         //   });
 
-//                   SHOW
 
-router.get('/:id', (req, res) => {
-  Record.findById(req.params.id, (err, showRecords) => {
-    res.render(
-      'show.ejs',
-      {
-        tabTitle: 'Record Info',
-        records: showRecords
-      })
-    })
-  });
 
   //                 EDIT
 
@@ -161,6 +150,37 @@ router.get('/:id/edit', (req, res) => {
 
 
 
+
+// LOGIN / REGISTER
+
+router.get('/login', (req, res) => {
+    res.render(
+      'login.ejs',
+      {
+        tabTitle: 'login',
+      })
+  });
+
+router.get('/register', (req, res) => {
+    res.render(
+      'register.ejs',
+      {
+        tabTitle: 'register',
+      })
+  });
+
+  //                   SHOW
+
+  router.get('/:id', (req, res) => {
+    Record.findById(req.params.id, (err, allRecords) => {
+      res.render(
+        'show.ejs',
+        {
+          tabTitle: 'Record Info',
+          records: allRecords
+        })
+      })
+    });
 
 
 
