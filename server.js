@@ -5,9 +5,8 @@ const mongoose = require('mongoose');
 const methodOverride = require('method-override');
 const app = express();
 //login
-// const bcrypt = require('bcrypt');
-// require("dotenv").config();
-// const session = require('express-session');
+require("dotenv").config();
+const session = require('express-session');
 
 
 
@@ -25,32 +24,31 @@ app.use(methodOverride('_method'));
 app.use(express.static('public'));
 app.use(express.json());
 
-// const store = new MongoDBSession({
-//   uri: process.env.MONGOURI,
-//   collection: "mySessions",
-// });
 
-// app.use(
-//   session({
-//     secret: process.env.SECRET,
-//     resave: false,
-//     saveUninitialized: false,
-//			 store: store
-//   })
-// );
+
+app.use(
+  session({
+    secret: process.env.SECRET,
+    resave: false,
+    saveUninitialized: false,
+
+  })
+);
 
 
 
 
 // CONTROLLERS //
 const userController = require('./controllers/users_controller.js')
-app.use(userController)
+app.use(userController);
+
+const sessionsController = require('./controllers/sessions_controller.js');
+app.use(sessionsController);
 
 const recordsController = require('./controllers/routes.js');
 app.use(recordsController);
 
-// const sessionsController = require('./controllers/sessions_controller');
-// app.use('/sessions', sessionsController);
+
 
 
 

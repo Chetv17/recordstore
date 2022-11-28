@@ -21,13 +21,7 @@ users.get('/register', (req, res) => {
       })
   });
 
-users.get('/login', (req, res) => {
-    res.render(
-      'login.ejs',
-      {
-        tabTitle: 'login',
-      })
-  });
+
 
 
 

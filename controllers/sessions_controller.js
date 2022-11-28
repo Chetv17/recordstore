@@ -1,21 +1,25 @@
 const express = require('express');
-const router = express.Router();
+const sessions = express.Router();
 const bcrypt = require('bcrypt');
-const User = require('../models/user.js');
+const User = require('../models/users.js');
+
+
+
+sessions.get('/login', (req, res) => {
+  res.render('login.ejs',
+  {
+    tabTitle: 'admin login',
+    currentUser: req.session.currentUser
+  })
+});
 
 
 
 
 
-
-
-
-sessions.get('/new', (req, res) => {
-  res.render('sessions/new.ejs', { currentUser: req.session.currentUser })
-})
 
 // on sessions form submit (log in)
-sessions.post('/', (req, res) => {
+sessions.post('/login', (req, res) => {
   // username is found and password matches
   // successful log in
 
@@ -28,7 +32,7 @@ sessions.post('/', (req, res) => {
   // some weird thing happened???????
 
   // Step 1 Look for the username
-  User.findOne({ username: req.body.username }, (err, foundUser) => {
+  User.findOne({ username: req.body.email }, (err, foundUser) => {
     // Database error
     if (err) {
       console.log(err)
@@ -43,14 +47,16 @@ sessions.post('/', (req, res) => {
         // add the user to our session
         req.session.currentUser = foundUser
         // redirect back to our home page
-        res.redirect('/')
+        res.redirect('/new')
       } else {
         // passwords do not match
         res.send('<a href="/"> password does not match </a>')
       }
     }
   })
-})
+});
+
+
 
 sessions.delete('/', (req, res) => {
   req.session.destroy(() => {

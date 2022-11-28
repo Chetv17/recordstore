@@ -6,7 +6,7 @@
     <%- include ('./partials/header.ejs') %>
 
     <h1>Login</h1>
-
+<form action="/login" method="POST">
 <div class="form-outline mb-4">
   <input type="email" name="email" id="form3Example4" class="form-contol" />
   <label class="form-label" for="form3Example4">Email</label>
@@ -17,7 +17,10 @@
  <label class="form-label" for="form3Example4">Password</label>
 </div>
 
-<button type="submit" class="btn btn-primary btn-block mb-4">Sign In</button>
+<button>
+  <input type='submit' value='Login' />
+</button>
+</form>
 
 
 
