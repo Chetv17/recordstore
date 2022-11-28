@@ -39,14 +39,26 @@ app.use(
 
 
 // CONTROLLERS //
-const userController = require('./controllers/users_controller.js')
-app.use(userController);
 
 const sessionsController = require('./controllers/sessions_controller.js');
 app.use(sessionsController);
 
+const userController = require('./controllers/users_controller.js')
+app.use(userController);
+
+const searchController = require('./controllers/search.js');
+app.use(searchController);
+
 const recordsController = require('./controllers/routes.js');
 app.use(recordsController);
+
+
+
+
+
+
+
+
 
 
 

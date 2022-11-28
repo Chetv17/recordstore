@@ -107,33 +107,7 @@ router.get('/', (req, res) => {
           })
         });
 
-        //                  SEARCH
-        // This youtube video helped me: https://www.youtube.com/watch?v=OEdPH4fV7vY
-        // Although, his code looks much different, and he had a section in his schema which I discovered does nothing for me... yet somehow this still works?
-
-
-        router.post('/search', (req, res) =>{
-          Record.find( { $text: { $search: req.body.searchTerm, $diacriticSensitive: true }}, (err, findRecords) => {
-            res.render(
-              'search.ejs',
-              {
-                tabTitle: 'Search',
-                records: findRecords,
-                currentUser: req.session.currentUser
-              })
-            })
-          });
-
-        // router.get('/:id', (req, res) => {
-        //     res.render(
-        //       'search.ejs',
-        //       {
-        //         tabTitle: 'Search',
-        //       })
-        //   });
-
-
-
+      
   //                 EDIT
 
   router.put('/:id', (req, res) => {

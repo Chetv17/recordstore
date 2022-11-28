@@ -5,6 +5,14 @@ const User = require('../models/users.js')
 
 // LOGIN / REGISTER
 
+users.get('/register', (req, res) => {
+    res.render(
+      'register.ejs',
+      {
+        tabTitle: 'register',
+      })
+  });
+
 users.post('/register', (req, res) => {
   req.body.password = bcrypt.hashSync(req.body.password, bcrypt.genSaltSync(10))
   User.create(req.body, (err, createdUser) => {
@@ -13,13 +21,7 @@ users.post('/register', (req, res) => {
   })
 });
 
-users.get('/register', (req, res) => {
-    res.render(
-      'register.ejs',
-      {
-        tabTitle: 'register',
-      })
-  });
+
 
 
 
