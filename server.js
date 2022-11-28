@@ -8,23 +8,17 @@ const app = express();
 require("dotenv").config();
 const session = require('express-session');
 
-
-
-
-
 // CONFIGURATION //
 
 let PORT = 3000;
 if(process.env.PORT){
 	PORT = process.env.PORT
-}
+};
 
 app.use(express.urlencoded({extended: true}));
 app.use(methodOverride('_method'));
 app.use(express.static('public'));
 app.use(express.json());
-
-
 
 app.use(
   session({
@@ -34,9 +28,6 @@ app.use(
 
   })
 );
-
-
-
 
 // CONTROLLERS //
 
@@ -51,6 +42,7 @@ app.use(searchController);
 
 const recordsController = require('./controllers/routes.js');
 app.use(recordsController);
+
 
 
 

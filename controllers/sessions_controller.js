@@ -1,9 +1,13 @@
+// DEPENDENCIES //
+
 const express = require('express');
 const sessions = express.Router();
 const bcrypt = require('bcrypt');
 const User = require('../models/users.js');
 
+// LOGIN
 
+// This youtube video helped me: https://www.youtube.com/watch?v=ILviQic0c8g
 
 sessions.get('/login', (req, res) => {
   res.render('login.ejs',
@@ -12,12 +16,6 @@ sessions.get('/login', (req, res) => {
     currentUser: req.session.currentUser
   })
 });
-
-
-
-
-
-
 
 sessions.post('/login', (req, res) => {
 
@@ -37,14 +35,12 @@ sessions.post('/login', (req, res) => {
 
         res.redirect('/')
       } else {
-        
+
         res.send('<a href="/"> password does not match </a>')
       }
     }
   })
 });
-
-
 
 sessions.delete('/login', (req, res) => {
   req.session.destroy(() => {

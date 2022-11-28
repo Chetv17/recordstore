@@ -1,15 +1,19 @@
+// DEPENDENCIES //
+
 const bcrypt = require('bcrypt')
 const express = require('express')
 const users = express.Router()
 const User = require('../models/users.js')
 
-// LOGIN / REGISTER
+// REGISTER
+
+// This youtube video helped me: https://www.youtube.com/watch?v=ILviQic0c8g
 
 users.get('/register', (req, res) => {
     res.render(
       'register.ejs',
       {
-        tabTitle: 'register',
+        tabTitle: 'admin register',
       })
   });
 
@@ -21,34 +25,4 @@ users.post('/register', (req, res) => {
   })
 });
 
-
-
-
-
-
-
-
-
 module.exports = users
-
-
-
-
-
-
-// users.post('/register', async (req, res) => {
-//
-//   try {
-//     const hashedPassword = await bcrypt.hash(req.body.password, 10)
-//     User.create({
-//       id: Date.now().toString(),
-//       fullname: req.body.fullname,
-//       email: req.body.email,
-//       password: hashedPassword,
-//     })
-//     res.redirect('/login')
-//   } catch (e) {
-//     console.log(e);
-//     res-redirect('/register')
-//   }
-// })

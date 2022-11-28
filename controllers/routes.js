@@ -1,12 +1,14 @@
+// DEPENDENCIES //
+
 const express = require('express');
 const router = express.Router();
 const Record = require('../models/schema.js');
 
-//// seed DATA
+// SEED DATA ////////////////////////////////
 
 const seedRecords = require('../models/seed.js');
 
-//              SEED DATABASE
+// SEED DATABASE ////////////////////////////
 
 router.get('/seed', (req, res) => {
     Record.create(seedRecords, (err, data)=>{
@@ -15,10 +17,10 @@ router.get('/seed', (req, res) => {
 });
 
 
-//                  ROUTES
+// ROUTES ////////////////////////////////////
 
 
-//                    NEW
+// NEW
 
 router.get('/new', (req, res) => {
   Record.find({}, (err, newRecords) => {
@@ -32,7 +34,7 @@ router.get('/new', (req, res) => {
     })
   });
 
-//                   POST
+// POST
 
 router.post('/', (req, res) =>{
   Record.create(req.body, (error, createdRecord) => {
@@ -40,16 +42,15 @@ router.post('/', (req, res) =>{
     })
 });
 
-//                   DELETE
-
 // DELETE
+
 router.delete('/:id', (req, res) => {
     Record.findByIdAndRemove(req.params.id, (err, data)=> {
       res.redirect('/');
     })
 });
 
-//                   INDEX
+// INDEX
 
 router.get('/', (req, res) => {
   Record.find({}, (err, allRecords) => {
@@ -64,8 +65,9 @@ router.get('/', (req, res) => {
   });
 
 
+// GENRE PAGES
 
-    //                  ROCK
+    // ROCK
 
     router.get('/rock', (req, res) => {
       Record.find({}, (err, rockRecords) => {
@@ -79,7 +81,7 @@ router.get('/', (req, res) => {
       })
     });
 
-    //                  COUNTRY
+    // COUNTRY
 
     router.get('/country', (req, res) => {
       Record.find({}, (err, countryRecords) => {
@@ -93,7 +95,7 @@ router.get('/', (req, res) => {
         })
       });
 
-      //                  JAZZ
+    // JAZZ
 
       router.get('/jazz', (req, res) => {
         Record.find({}, (err, jazzRecords) => {
@@ -107,12 +109,11 @@ router.get('/', (req, res) => {
           })
         });
 
-      
-  //                 EDIT
+//  EDIT
 
-  router.put('/:id', (req, res) => {
-    Record.findByIdAndUpdate(req.params.id, req.body, {new:true}, (err, updatedRecords) => {
-        res.redirect('/')
+router.put('/:id', (req, res) => {
+  Record.findByIdAndUpdate(req.params.id, req.body, {new:true}, (err, updatedRecords) => {
+    res.redirect('/')
     })
 });
 
@@ -130,9 +131,9 @@ router.get('/:id/edit', (req, res) => {
 });
 
 
-  //                   SHOW
+// SHOW
 
-  router.get('/:id', (req, res) => {
+router.get('/:id', (req, res) => {
     Record.findById(req.params.id, (err, showRecords) => {
       res.render(
         'show.ejs',
@@ -146,43 +147,4 @@ router.get('/:id/edit', (req, res) => {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
 module.exports = router;
-
-
-
-
-// // LOGIN / REGISTER
-//
-// router.post.post('/register', (req, res) =>{
-//   Record.create(req.body, (error, createdRecord) => {
-//         res.redirect('/');
-//     })
-// });
-//
-// router.get('/login', (req, res) => {
-//     res.render(
-//       'login.ejs',
-//       {
-//         tabTitle: 'login',
-//       })
-//   });
-//
-// router.get('/register', (req, res) => {
-//     res.render(
-//       'register.ejs',
-//       {
-//         tabTitle: 'register',
-//       })
-//   });

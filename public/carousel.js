@@ -1,4 +1,4 @@
-// const express = require('express');
+// jQuery for SHOW page photo carousel
 
 $(() => {
 

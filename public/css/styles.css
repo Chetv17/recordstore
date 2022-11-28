@@ -10,15 +10,23 @@ header {
   background-color: lightgrey;
 }
 
+#logo {
+  width: 70px;
+  height: auto;
+}
+
+/* DROPDOWN MENU */
+
 .dropdown {
   position: absolute;
   top: 3px;
   right: 3px;
 }
 
-#logo {
-  width: 70px;
-  height: auto;
+/* FOOTER */
+
+#footDiv {
+  height: 280px;
 }
 
 #new {
@@ -26,13 +34,6 @@ header {
   right: 50%;
   bottom: 0;
   list-style: none;
-
-}
-
-/* FOOTER */
-
-#footDiv {
-  height: 280px;
 }
 
 #search {
@@ -47,7 +48,6 @@ header {
 
 #recordList {
   list-style: none;
-
 }
 
 /* INDEX PAGE */
@@ -55,7 +55,6 @@ header {
 .cardAlbum {
    width: 18rem;
    margin: 10px;
-
 }
 
 .cardAlbum:hover {
@@ -93,42 +92,33 @@ header {
 
 /* SHOW PAGE */
 
+ /* CAROUSEL */
+ .cc {
+ 	 width: 70%;
+ 	 display: flex;
+	 justify-content: space-around;
+ }
+  .carouselImages {
+	 width: 50%;
+ }
 
-/* CAROUSEL */
-.cc {
-	width: 70%;
-	display: flex;
-	justify-content: space-around;
-}
-.carouselImages {
-	width: 50%;
-}
+ .carouselImages img {
+	 width: 100%;
+	 display: none;
+ }
 
-.carouselImages img {
-	width: 100%;
-	display: none;
-}
+ .carouselImages img:first-of-type {
+	 display: block;
+ }
 
-.carouselImages img:first-of-type {
-	display: block;
-}
+ .carousel-button {
+	 align-self: center;
+	 padding: 10px;
+ }
 
-.carousel-button {
-	align-self: center;
-	padding: 10px;
-
-}
-.carousel-button:hover {
-	cursor: pointer;
-}
-
-
-
-
-
-
-
-
+ .carousel-button:hover {
+	 cursor: pointer;
+ }
 
 
 @media (max-width: 509px) {
@@ -156,7 +146,6 @@ header {
 
   #new {
     left: -10px;
-
   }
 
   .images {
