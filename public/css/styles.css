@@ -23,8 +23,9 @@ header {
 
 #new {
   position: absolute;
-  right: 0;
+  right: 50%;
   bottom: 0;
+  list-style: none;
 
 }
 
@@ -147,6 +148,15 @@ header {
   #search {
     top: 200px;
     left: 2px;
+  }
+
+  #footDiv {
+    height: 400px;
+  }
+
+  #new {
+    left: -10px;
+
   }
 
   .images {

@@ -79,10 +79,12 @@
     <h4 style="text-align: center;"><%=records.label%></h4>
     <h4 style="text-align: center;">In Stock: <%=records.copies%></h4>
 
-<button type="button" class="btn btn-secondary" style="position: relative; left: 47%; margin-bottom: 10px;">
-      <a style="text-decoration: none; color: white;" href="/<%=records.id%>/edit">Edit</a>
-</button>
+    <% if (currentUser) { %>
 
+    <button type="button" class="btn btn-success" style="position: relative; left: 47%; margin-bottom: 10px;">
+      <a style="text-decoration: none; color: white;" href="/<%=records.id%>/edit">Edit</a>
+    </button>
+    <% } %>
 
 
 <%- include ('./partials/footer.ejs') %>

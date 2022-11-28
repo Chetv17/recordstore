@@ -15,9 +15,20 @@
     <p class="card-text">The city's largest selection of NEW and USED vinyl. <br/> We BUY used vinyl! <br/> Store Hours: <br/> Tuesday - Saturday: 9am to 7pm</p>
     <br/>
     <br/>
-    <a href="/new" id="new" class="btn btn-secondary btn-sm">Add New</a>
+    <ul id="new" style="text-align: center;">
+        <% if (currentUser) { %>
+          <li style="margin-bottom: 2px;">Welcome <%=currentUser.fullname%>!</li>
+          <li style="margin-bottom: 2px;">
+            <a href="/new" class="btn btn-success btn-sm">Add New</a>
+          </li>
+          <li style="margin-bottom: 2px;">
+            <form action="/sessions?_method=DELETE" method="POST">
+            <input type="submit" class="btn btn-primary btn-sm" value="Log Out"  />
+          </li>
+    <% } %>
+    </ul>
   </div>
-</div>
+
 
 
 </footer>

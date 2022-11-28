@@ -5,28 +5,30 @@
 <body>
     <%- include ('./partials/header.ejs') %>
 
-    <h1>Login</h1>
-<form action="/login" method="POST">
-<div class="form-outline mb-4">
-  <input type="email" name="email" id="form3Example4" class="form-contol" />
-  <label class="form-label" for="form3Example4">Email</label>
-</div>
-
-<div class="form-outline mb-4">
- <input type="password" name="password" id="form3Example4" class="form-contol" />
- <label class="form-label" for="form3Example4">Password</label>
-</div>
-
-<button>
-  <input type='submit' value='Login' />
-</button>
-</form>
 
 
+    <div class="container-fluid" style="margin-top: 50px;">
+     <form action="/login" method="POST" style="margin-bottom: 200px;">
+       <h1>Login</h1>
+       <div class="form-outline mb-4">
+       <input type="email" name="email" placeholder="E-mail" class="form-contol" />
+       </div>
+
+       <div class="form-outline mb-4">
+       <input type="password" name="password" placeholder="Password" class="form-contol" />
+       </div>
+
+      <button type="button" class="btn btn-primary" style="margin-bottom: 10px;">
+       <input type="submit" value="Login" style="border: none; background: none; color: white;"/>
+      </button>
+    </form>
+    <%- include ('./partials/footer.ejs') %>
+    </div>
 
 
 
-  <%- include ('./partials/footer.ejs') %>
+
+
 
   </body>
 </html>

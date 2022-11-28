@@ -26,7 +26,8 @@ router.get('/new', (req, res) => {
       'new.ejs',
       {
         tabTitle: 'New Record',
-        records: newRecords
+        records: newRecords,
+        currentUser: req.session.currentUser
       })
     })
   });
@@ -56,7 +57,8 @@ router.get('/', (req, res) => {
       'index.ejs',
       {
         tabTitle: 'Homepage',
-        records: allRecords
+        records: allRecords,
+        currentUser: req.session.currentUser
       })
     })
   });
@@ -71,7 +73,8 @@ router.get('/', (req, res) => {
         'rock.ejs',
         {
           tabTitle: 'Rock',
-          records: rockRecords
+          records: rockRecords,
+          currentUser: req.session.currentUser
         })
       })
     });
@@ -84,7 +87,8 @@ router.get('/', (req, res) => {
           'country.ejs',
           {
             tabTitle: 'Country',
-            records: countryRecords
+            records: countryRecords,
+            currentUser: req.session.currentUser
           })
         })
       });
@@ -97,7 +101,8 @@ router.get('/', (req, res) => {
             'jazz.ejs',
             {
               tabTitle: 'Jazz',
-              records: jazzRecords
+              records: jazzRecords,
+              currentUser: req.session.currentUser
             })
           })
         });
@@ -113,7 +118,8 @@ router.get('/', (req, res) => {
               'search.ejs',
               {
                 tabTitle: 'Search',
-                records: findRecords
+                records: findRecords,
+                currentUser: req.session.currentUser
               })
             })
           });
@@ -142,7 +148,8 @@ router.get('/:id/edit', (req, res) => {
             'edit.ejs',
             {
                 tabTitle: 'Edit Info',
-                records: editRecords
+                records: editRecords,
+                currentUser: req.session.currentUser
             }
         )
     })
@@ -157,7 +164,8 @@ router.get('/:id/edit', (req, res) => {
         'show.ejs',
         {
           tabTitle: 'Record Info',
-          records: showRecords
+          records: showRecords,
+          currentUser: req.session.currentUser
         })
       })
     });
