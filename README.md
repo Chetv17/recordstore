@@ -7,7 +7,7 @@
 
 For this Express / MongoDB project I decided to make a website for a record store. Albums contain a lot of data that an online retailer might want to display for potential customers. Data such as album art, track listings, musicians/instruments, record labels, release years and so on... I figured this material would make for an interesting challenge.
 
-##Process
+###### Process
 
 *7 REST-ful Routes*
 
