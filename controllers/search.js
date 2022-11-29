@@ -8,18 +8,17 @@ const Record = require('../models/schema.js');
 
 // This youtube video helped me: https://www.youtube.com/watch?v=OEdPH4fV7vY
 
-search.post('/search', (req, res) =>{
-  let searchTerm = req.body.searchTerm;
-  Record.find( { $text: { $search: req.body.searchTerm, $diacriticSensitive: true }}, (err, findRecords) => {
-    res.render(
-      'search.ejs',
+search.get('/search', (req, res)=>{
+    console.log(req.query.search)
+    Record.find({ name: {$regex: req.query.search, $options : 'i'}}, (err, foundRecord)=>{
+
+      res.render('search.ejs',
       {
         tabTitle: 'Search',
-        records: findRecords,
+        records: foundRecord,
         currentUser: req.session.currentUser
       })
     })
   });
-
 
 module.exports = search

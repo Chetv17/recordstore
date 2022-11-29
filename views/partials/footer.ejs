@@ -4,9 +4,13 @@
   <div id="footDiv" class="card">
   <div class="card-footer">
    43rd Street Records ///
-   <form class="d-flex" id="search" action="/search" method="POST">
-     <input class="form-control me-2" type="search" name="searchTerm"  placeholder="Search" aria-label="Search">
-     <button class="btn btn-outline-success" type="submit">Search</button>
+
+
+   <form class="d-flex" id="search" action="/search/" method="GET">
+     <input class="form-control me-2" type="text" name="search"  placeholder="search" value="">
+     <input type="submit" value="Search" />
+
+
    </form>
   </div>
 

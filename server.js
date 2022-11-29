@@ -25,11 +25,12 @@ app.use(
     secret: process.env.SECRET,
     resave: false,
     saveUninitialized: false,
-
   })
 );
 
 // CONTROLLERS //
+
+
 
 const sessionsController = require('./controllers/sessions_controller.js');
 app.use(sessionsController);
@@ -42,6 +43,8 @@ app.use(searchController);
 
 const recordsController = require('./controllers/routes.js');
 app.use(recordsController);
+
+
 
 
 

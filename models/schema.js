@@ -27,7 +27,6 @@ const recordSchema = new Schema ({
 
 const Record = mongoose.model('Record', recordSchema);
 
-// recordSchema.index({name: 'text'});
-// recordSchema.index({"$**" : 'text'});
+
 
 module.exports = Record;
