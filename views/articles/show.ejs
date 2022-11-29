@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <%- include ('../partials/head.ejs') %>
+ <body>
+     <%- include ('../partials/header.ejs') %>
+
+  <div class="container-fluid frontPage">
+
+    <header>
+			<h1><%=article.title%></h1>
+			   <nav>
+			   	<ul>
+					  <li>
+					  	<a href="/">Home</a>
+				    	</li>
+				  	<li>
+					  	<a href="/articles">Articles Index</a>
+					   </li>
+				  </ul>
+			   </nav>
+		</header>
+
+		<main>
+			<section>
+				<%=article.body%>
+			</section>
+		</main>
+
+    <section>
+    <a href="/articles/<%=article._id%>/edit">Edit</a>
+    </section>
+
+    <section>
+      <form action="/articles/<%=article._id%>?_method=DELETE" method="post">
+        <input type="submit" value="Delete Article"/>
+      </form>
+    </section>
+
+
+    <%- include ('../partials/footer.ejs') %>
+  </div>
+ </body>
+</html>

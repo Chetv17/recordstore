@@ -30,6 +30,9 @@ app.use(
 
 // CONTROLLERS //
 
+const articlesController = require('./controllers/articles_controller.js');
+app.use('/articles', articlesController);
+
 const authorsController = require('./controllers/authors_controller.js');
 app.use('/authors', authorsController);
 
