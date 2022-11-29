@@ -4,12 +4,14 @@
 
   <body>
     <%- include ('./partials/header.ejs') %>
-
+  <div class="container-fluid frontPage">
     <img src='<%=records.cover%>' />
     <h1><%=records.name%></h1>
     <h2><%=records.artist%></h2>
 
     <h4>Edit Album Info:</h4>
+
+
 
     <form action="/<%=records.id%>?_method=PUT" method="POST">
       <label for="Input" class="form-label">Album Name:</label>
@@ -84,12 +86,14 @@
 
     </form>
 
-    <button type="button" class="btn btn-danger" style= "position: relative; left: 210px; bottom: 50px; margin: 5px; width: 95px;">
+    <button type="button" class="btn btn-danger" style= "position: relative; left: 185px; bottom: 50px; margin: 5px; width: 95px;">
             <form  action="/<%=records.id%>?_method=DELETE" method="POST">
                 <input type="submit" value="Delete" style='border: none; color: black; background: none;'/>
             </form>
         </button>
 
 <%- include ('./partials/footer.ejs') %>
-  </body>
+
+  </div>
+ </body>
 </html>

@@ -6,7 +6,7 @@
     <%- include ('./partials/header.ejs') %>
 
     <h4>Add New Album:</h4>
-
+   <div class="container-fluid frontPage">
     <form action="/" method="POST">
       <label for="Input" class="form-label">Album Name:</label>
       <input type='text' class="form-control" id="Input" name='name' placeholder='Album Name' />
@@ -37,6 +37,7 @@
     </button>
 
     </form>
-<%- include ('./partials/footer.ejs') %>
+   <%- include ('./partials/footer.ejs') %>
+</div>
   </body>
 </html>

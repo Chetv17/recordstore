@@ -6,9 +6,6 @@ body {
 
 /* HEADER PARTIAL */
 
-header {
-  background-color: lightgrey;
-}
 
 #logo {
   width: 70px;
@@ -25,10 +22,6 @@ header {
 
 /* FOOTER */
 
-#footDiv {
-  height: 280px;
-}
-
 #new {
   position: absolute;
   right: 50%;
@@ -40,8 +33,8 @@ header {
   width: 250px;
   height: 37px;
   position: absolute;
-  top: 2px;
-  right: 2px;
+  bottom: 240px;
+  right: 25px;
 }
 
 /* LISTS */
@@ -85,7 +78,7 @@ header {
 .frontPage {
   position: absolute;
   right: 0;
-  width: 90%;
+  width: 100%;
   top: 100px;
 
 }
@@ -126,6 +119,10 @@ header {
     height: 55px;
   }
 
+  footer {
+    height: 400px;
+  }
+
   .dropdown {
     top: 57px;
     left: 0;
@@ -136,16 +133,14 @@ header {
   }
 
   #search {
-    top: 200px;
-    left: 2px;
-  }
-
-  #footDiv {
-    height: 400px;
+    bottom: 20px;
+    left: 37px;
   }
 
   #new {
-    left: -10px;
+    width: 100%;
+    left: -20px;
+    bottom: 60px;
   }
 
   .images {

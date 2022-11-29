@@ -3,10 +3,10 @@
 <%- include ('./partials/head.ejs') %>
 
 
-  <body>
+<body>
     <%- include ('./partials/header.ejs') %>
 
-
+  <div class="container-fluid frontPage">
       <h1 style="text-align: center"><%=records.name%></h1>
       <h2 style="text-align: center"><%=records.artist%></h2>
 
@@ -74,7 +74,7 @@
        </tr>
       <% } %>
      </table>
-    </div>
+  </div>
     <h4 style="text-align: center;">Release Year: <%=records.year%></h4>
     <h4 style="text-align: center;"><%=records.label%></h4>
     <h4 style="text-align: center;">In Stock: <%=records.copies%></h4>
@@ -88,5 +88,7 @@
 
 
 <%- include ('./partials/footer.ejs') %>
+
+</div>
   </body>
 </html>

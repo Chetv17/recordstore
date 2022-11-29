@@ -2,38 +2,40 @@
 <html lang="en" dir="ltr">
 <%- include ('./partials/head.ejs') %>
 
-<body>
-    <%- include ('./partials/header.ejs') %>
-<h1 id="frontH1" style="text-align: center;"> Jazz </h1>
+ <body>
+     <%- include ('./partials/header.ejs') %>
+   <h1 id="frontH1" style="text-align: center;"> Jazz </h1>
+
+  <div class="container-fluid frontPage">
+   <ul>
+     <div id="albumArt" class="row">
+      <% for (let i = 0; i < records.length; i++) { %>
+      <%  if(records[i].genre === 'jazz') { %>
 
 
-<ul>
-  <div id="albumArt" class="row">
-    <% for (let i = 0; i < records.length; i++) { %>
-    <%  if(records[i].genre === 'jazz') { %>
+     <div class="col"
+     <li >
+       <div class="card cardAlbum">
+         <a href='/<%=records[i].id%>'>
+         <img class='images' src='<%=records[i].cover%>' />
+         </a>
+        <div class="card-body">
+          <h6 class="card-title" style="text-align: left;"><%=records[i].name%><br/><%=records[i].artist%></h6>
 
-
-    <div class="col"
-    <li >
-      <div class="card cardAlbum">
-        <a href='/<%=records[i].id%>'>
-        <img class='images' src='<%=records[i].cover%>' />
-        </a>
-       <div class="card-body">
-         <h6 class="card-title" style="text-align: left;"><%=records[i].name%><br/><%=records[i].artist%></h6>
+        </div>
 
        </div>
+     </li>
 
-      </div>
-    </li>
+     </div>
 
-    </div>
+     <% } %>
+   <% } %>
+   </div>
+  </ul>
 
-    <% } %>
-  <% } %>
+ <%- include ('./partials/footer.ejs') %>
+
   </div>
-</ul>
-
-<%- include ('./partials/footer.ejs') %>
-  </body>
+ </body>
 </html>

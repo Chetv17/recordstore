@@ -4,7 +4,7 @@
 
 <body>
     <%- include ('./partials/header.ejs') %>
-
+ <div class="container-fluid frontPage">
     <div class="container-fluid" style="margin-top: 50px;">
      <form action="/register" method="POST" style="margin-bottom: 200px;">
        <h1>Register</h1>
@@ -30,23 +30,24 @@
 
     </div>
 
-    <footer>
-      <div id="footDiv" class="card">
-      <div class="card-footer">
+    <footer class="bg-dark py-5 mt-5">
+
+      <div class="container text-bold text-left" style="color: white; font-weight: bold;">
        43rd Street Records ///
-       <form class="d-flex" id="search" action="/search" method="POST">
-         <input class="form-control me-2" type="search" name="searchTerm"  placeholder="Search" aria-label="Search">
-         <button class="btn btn-outline-success" type="submit">Search</button>
+
+
+       <form id="search" action="/search/" method="GET">
+         <input class="form-control me-2" type="text" name="search"  placeholder="Search Album Title" value="">
        </form>
-      </div>
 
-      <div class="card-body">
 
-        <p class="card-text">The city's largest selection of NEW and USED vinyl. <br/> We BUY used vinyl! <br/> Store Hours: <br/> Tuesday - Saturday: 9am to 7pm</p>
+
+
+        <p style="color: white; postion: absolute; left: 25px; bottom: 240px;">The city's largest selection of NEW and USED vinyl. <br/> We BUY used vinyl! <br/> Store Hours: <br/> Tuesday - Saturday: 9am to 7pm <br/> Sunday: 12pm to 5pm </p>
+        <br/>
         <br/>
       </div>
-
-    </footer>
+  </div>
 
   </body>
 </html>
