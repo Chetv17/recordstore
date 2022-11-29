@@ -30,7 +30,8 @@ app.use(
 
 // CONTROLLERS //
 
-
+const authorsController = require('./controllers/authors_controller.js');
+app.use('/authors', authorsController);
 
 const sessionsController = require('./controllers/sessions_controller.js');
 app.use(sessionsController);
@@ -43,6 +44,8 @@ app.use(searchController);
 
 const recordsController = require('./controllers/routes.js');
 app.use(recordsController);
+
+
 
 
 
