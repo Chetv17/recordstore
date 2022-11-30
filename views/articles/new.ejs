@@ -21,11 +21,16 @@
 		</header>
 
 		<main>
-			<form action="/articles" method="post">
-				<input type="text" name="title" /><br/>
-				<textarea name="body"></textarea><br/>
-				<input type="submit" value="Publish Article"/>
-			</form>
+      <form action="/articles" method="post">
+         <select name="authorId">
+          <% for(let i = 0; i < authors.length; i++) { %>
+             <option value="<%=authors[i]._id%>"><%=authors[i].name%></option>
+          <% } %>
+         </select><br/>
+        <input type="text" name="title" /><br/>
+         <textarea name="body"></textarea><br/>
+        <input type="submit" value="Publish Article"/>
+      </form>
 		</main>
 
     <%- include ('../partials/footer.ejs') %>
