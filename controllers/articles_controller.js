@@ -6,6 +6,17 @@ const Article = require('../models/articles.js');
 const Author = require('../models/authors.js');
 
 
+articles.get('/', (req, res)=>{
+  Article.find({}, (err, foundArticles)=>{
+	res.render('articles/index.ejs',
+  {
+    tabTitle: 'Articles Home',
+    articles: foundArticles,
+    currentUser: req.session.currentUser
+  })
+ })
+});
+
 
 articles.put('/:id', (req, res)=>{
     Article.findByIdAndUpdate(req.params.id, req.body, { new: true }, (err, updatedArticle)=>{
@@ -31,17 +42,6 @@ articles.put('/:id', (req, res)=>{
           })
     });
 
-
-articles.get('/', (req, res)=>{
-  Article.find({}, (err, foundArticles)=>{
-	res.render('articles/index.ejs',
-  {
-    tabTitle: 'Articles Home',
-    articles: foundArticles,
-    currentUser: req.session.currentUser
-  })
- })
-});
 
 articles.post('/', (req, res)=>{
     Author.findById(req.body.authorId, (err, foundAuthor)=>{
